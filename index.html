@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的专属导航页</title>
+    <style>
+        /* 基础页面样式 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* 整体容器，控制最大宽度居中 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 顶部大标题 */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        /* 分类区块 */
+        .category {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* 分类标题 */
+        .category h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+
+        /* 链接列表容器 - 关键：自动换行 */
+        .link-list {
+            display: flex;
+            flex-wrap: wrap; /* 这一行让超出宽度的链接自动换行 */
+            gap: 12px;       /* 链接之间的间距 */
+        }
+
+        /* 单个链接的样式（像一个个小按钮） */
+        .link-item {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        /* 鼠标悬停时的效果 */
+        .link-item:hover {
+            background-color: #e1e8ed;
+            color: #2980b9;
+            border-color: #bdc3c7;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>我的常用导航</h1>
+
+        <!-- 分类 1：你的项目 -->
+        <div class="category">
+            <h2>我的项目</h2>
+            <div class="link-list">
+                <!-- 在这里添加链接，格式： <a href="网址" class="link-item" target="_blank">名字</a> -->
+                <a href="https://mateusgiordani.github.io/quick-cam-preview" class="link-item" target="_blank">快影预览 (Quick Cam)</a>
+                <a href="https://github.com/urenai/JmpUrl" class="link-item" target="_blank">当前仓库</a>
+            </div>
+        </div>
+
+        <!-- 分类 2：开发工具 -->
+        <div class="category">
+            <h2>开发工具</h2>
+            <div class="link-list">
+                <a href="https://github.com" class="link-item" target="_blank">GitHub</a>
+                <a href="https://chatgpt.com" class="link-item" target="_blank">ChatGPT</a>
+                <a href="https://claude.ai" class="link-item" target="_blank">Claude</a>
+                <a href="https://vercel.com" class="link-item" target="_blank">Vercel</a>
+            </div>
+        </div>
+
+        <!-- 分类 3：常用网站 -->
+        <div class="category">
+            <h2>常用网站</h2>
+            <div class="link-list">
+                <a href="https://www.baidu.com" class="link-item" target="_blank">百度</a>
+                <a href="https://www.bilibili.com" class="link-item" target="_blank">B站</a>
+                <a href="https://www.zhihu.com" class="link-item" target="_blank">知乎</a>
+                <a href="https://www.taobao.com" class="link-item" target="_blank">淘宝</a>
+            </div>
+        </div>
+        
+        <!-- 如果你需要新的分类，就把上面这块从 <div class="category"> 到 </div> 完整复制一份，改改名字就行 -->
+
+    </div>
+
+</body>
+</html>
